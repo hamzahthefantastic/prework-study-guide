@@ -33,45 +33,71 @@
         <h2>Git</h2>
         <h3>SET UP</h3>
         <ul>
-          <li>git config --global user.name “[firstname lastname]”
+          <li>(git config --global user.name “[firstname lastname]”)
             set a name that is identifiable for credit when review version history</li>
-          <li>git config --global user.email “[valid-email]”
+          <li>git config --global user.email “[valid-email]”)
             set an email address that will be associated with each history marker</li>
-          <li>git config --global color.ui auto
+          <li>(git config --global color.ui auto)
             set automatic command line coloring for Git for easy reviewing</li>
-          <li>git init
+          <li>(git init)
             initialize an existing directory as a Git repository</li>
-          <li>git clone [url]
+          <li>(git clone [url])
             retrieve an entire repository from a hosted location via URL</li>
         </ul>
         <h3>STAGE & SNAPSHOT</h3>
         <ul>
-          <li>git status
+          <li>git status)
             show modified files in working directory, staged for your next commit</li>
-          <li>git add [file]
+          <li>(git add [file])
             add a file as it looks now to your next commit (stage)
             </li>
-          <li>git reset [file]
+          <li>(git reset [file])
             unstage a file while retaining the changes in working directory</li>
-          <li>git diff
+          <li>(git diff)
             diff of what is changed but not staged</li>
-          <li>git diff --staged
+          <li>(git diff --staged)
             diff of what is staged but not yet commited</li>
-          <li>git commit -m “[descriptive message]”
+          <li>(git commit -m “[descriptive message]”)
             commit your staged content as a new commit snapshot</li>
         </ul>
         <h3>BRANCH & MERGE</h3>
         <ul>
-          <li>git branch
+          <li>(git branch)
             list your branches. a * will appear next to the currently active branch</li>
-          <li>git branch [branch-name]
+          <li>(git branch [branch-name])
             create a new branch at the current commit</li>
-          <li>git checkout
+          <li>(git checkout)
             switch to another branch and check it out into your working directory</li>
-          <li>git merge [branch]
+          <li>(git merge [branch])
             merge the specified branch’s history into the current one</li>
-          <li>git log
+          <li>(git log)
             show all commits in the current branch’s history</li>
+        </ul>
+        <h3>INSPECTS & COMPARE</h3>
+        <ul>
+          <li>(git log)
+            show the commit history for the currently active branch</li>
+          <li>(git log branchB..branchA
+            show the commits on branchA that are not on branchB</li>
+          <li>(git log --follow [file])
+            show the commits that changed file, even across renames</li>
+          <li>(git diff branchB...branchA)
+            show the diff of what is in branchA that is not in branchB</li>
+          <li>(git show [SHA])
+            show any object in Git in human-readable format</li>
+        </ul>
+        <h3>SHARE & UPDATE</h3>
+        <ul>
+          <li>(git remote add [alias] [url])
+            add a git URL as an alias</li>
+          <li>(git fetch [alias])
+            fetch down all the branches from that Git remote</li>
+          <li>(git merge [alias]/[branch])
+            merge a remote branch into your current branch to bring it up to date</li>
+          <li>(git push [alias] [branch])
+            Transmit local branch commits to the remote repository branch</li>
+          <li>(git pull)
+            fetch and merge any commits from the tracking remote branch</li>
         </ul>
       </section>
    
